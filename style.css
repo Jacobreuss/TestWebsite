@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #111;
+  background: #e0e0e0;
   color: #fff;
 }
 
@@ -43,6 +43,7 @@ body {
   position: relative;
   width: 100vw;
   height: calc(100vh + 200vh); /* video height + spacer height */
+  background: #e0e0e0;
 }
 
 .site-header {
@@ -94,6 +95,7 @@ body {
   }
   .video-section {
     height: calc(56vw + 200vh);
+    background: #e0e0e0;
   }
 }
 
