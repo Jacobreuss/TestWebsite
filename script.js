@@ -18,9 +18,18 @@ video.addEventListener('loadedmetadata', () => {
     video.currentTime = progress * duration;
   });
 
-  // Prevent video from playing automatically
+  // Prevent video from playing automatically and try to unlock on mobile
   video.pause();
   video.currentTime = 0;
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      video.pause();
+    }).catch(error => {
+      video.pause();
+      console.log('Playback prevented on first video. This is expected on mobile.');
+    });
+  }
 });
 
 // Prevent default play on click
@@ -45,8 +54,18 @@ if (video2 && spacer2) {
       video2.currentTime = progress2 * duration2;
     });
 
+    // Prevent video from playing automatically and try to unlock on mobile
     video2.pause();
     video2.currentTime = 0;
+    const playPromise2 = video2.play();
+    if (playPromise2 !== undefined) {
+      playPromise2.then(() => {
+        video2.pause();
+      }).catch(error => {
+        video2.pause();
+        console.log('Playback prevented on second video. This is expected on mobile.');
+      });
+    }
   });
 
   video2.addEventListener('play', (e) => {
