@@ -84,20 +84,10 @@ body {
   height: auto;
 }
 
-@media (max-width: 600px) and (orientation: portrait) {
-  #scrollVideo, #scrollVideo2 {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
-  }
-  .video-scroll-container {
-    height: 100vh;
-    min-height: 200px;
-  }
-  .video-section {
-    height: calc(100vh + 200vh);
-    background: #cccccc;
+@media (max-width: 600px) {
+  .intro-image {
+    max-width: 90vw;
+    width: 80vw;
   }
 }
 
