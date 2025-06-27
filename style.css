@@ -1,7 +1,8 @@
+/* Updated background color to #cccccc to match provided image */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #808080;
+  background: #cccccc;
   color: #fff;
 }
 
@@ -43,7 +44,7 @@ body {
   position: relative;
   width: 100vw;
   height: calc(100vh + 200vh); /* video height + spacer height */
-  background: #808080;
+  background: #cccccc;
 }
 
 .site-header {
@@ -71,15 +72,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #808080;
-  padding: 2rem 0 1rem 0;
+  background: #cccccc;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
 
 .intro-image {
-  max-width: 65vw;
+  max-width: 100vw;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
@@ -95,7 +96,7 @@ body {
   }
   .video-section {
     height: calc(75vw + 200vh);
-    background: #808080;
+    background: #cccccc;
   }
 }
 
