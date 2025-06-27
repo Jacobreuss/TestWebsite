@@ -14,9 +14,11 @@ body {
   z-index: 1;
 }
 
-#scrollVideo {
+#scrollVideo, #scrollVideo2 {
   width: 100vw;
   height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   object-fit: cover;
   display: block;
   position: sticky;
@@ -77,4 +79,19 @@ body {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 600px) {
+  #scrollVideo, #scrollVideo2 {
+    width: 100vw;
+    height: 56vw; /* 16:9 aspect ratio for mobile */
+    max-height: 60vh;
+  }
+  .video-scroll-container {
+    height: 56vw;
+    min-height: 200px;
+  }
+  .video-section {
+    height: calc(56vw + 200vh);
+  }
 } 
